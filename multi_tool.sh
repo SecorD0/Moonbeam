@@ -25,6 +25,7 @@ while test $# -gt 0; do
 		echo -e "https://teletype.in/@letskynode/Moonbeam_EN — English-language guide"
 		echo -e "https://teletype.in/@letskynode/Moonbeam_RU — Russian-language guide"
 		echo -e "https://t.me/letskynode — node Community"
+		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
 		return 0 2>/dev/null; exit 0
 		;;
@@ -62,7 +63,7 @@ install() {
 			docker run -dit --name moonbeam_node --restart always --network host -v $HOME/.moonbase-alpha:/data -u $(id -u ${USER}):$(id -g ${USER}) purestake/moonbeam --base-path data --chain alphanet  --name "$moonbeam_moniker" --validator --execution wasm --wasm-execution compiled --pruning archive --state-cache-size 1 -- --pruning archive --name "$moonbeam_moniker (Embedded Relay)"
 		fi
 		. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n moonbeam_log -v "docker logs moonbeam_node -fn 100" -a
-		. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n aleo_node_info -v ". <(wget -qO- https://raw.githubusercontent.com/SecorD0/Moonbeam/main/node_info.sh) 2> /dev/null" -a
+		. <(wget -qO- https://raw.githubusercontent.com/SecorD0/utils/main/miscellaneous/insert_variable.sh) -n moonbeam_node_info -v ". <(wget -qO- https://raw.githubusercontent.com/SecorD0/Moonbeam/main/node_info.sh) 2> /dev/null" -a
 		printf_n "
 The node was ${C_LGn}started${RES}.
 
