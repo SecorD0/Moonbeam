@@ -26,7 +26,10 @@ while test $# -gt 0; do
 		echo -e "${C_LGn}Useful URLs${RES}:"
 		echo -e "https://github.com/SecorD0/Moonbeam/blob/main/node_info.sh - script URL"
 		echo -e "         (you can send Pull request with new texts to add a language)"
+		echo -e "https://teletype.in/@letskynode/Moonbeam_EN — English-language a node installation guide"
+		echo -e "https://teletype.in/@letskynode/Moonbeam_RU — Russian-language a node installation guide"
 		echo -e "https://t.me/letskynode — node Community"
+		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
 		return 0 2>/dev/null; exit 0
 		;;
