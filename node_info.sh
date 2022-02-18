@@ -143,7 +143,7 @@ main() {
 		if [ "$catching_up_2" = "true" ]; then
 			local current_block_2=`api_request system_syncState 9934 | jq ".result.highestBlock"`
 			local diff_2=`bc -l <<< "$current_block_2-$latest_block_height_2"`
-			local takes_time_2=`bc -l <<< "$diff_2/95/60"`
+			local takes_time_2=`bc -l <<< "$diff_2/350/60"`
 			printf_n "$t_sy1_2"
 			printf_n "$t_sy2_2" "$current_block_2" "$latest_block_height_2" "$diff_2" "$takes_time_2"		
 		else
