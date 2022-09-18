@@ -24,7 +24,8 @@ while test $# -gt 0; do
 		echo -e "https://github.com/SecorD0/Moonbeam/blob/main/multi_tool.sh — script URL"
 		echo -e "https://teletype.in/@letskynode/Moonbeam_EN — English-language guide"
 		echo -e "https://teletype.in/@letskynode/Moonbeam_RU — Russian-language guide"
-		echo -e "https://t.me/letskynode — node Community"
+		echo -e "https://t.me/OnePackage — noderun and tech community"
+		echo -e "https://learning.1package.io — guides and articles"
 		echo -e "https://teletype.in/@letskynode — guides and articles"
 		echo
 		return 0 2>/dev/null; exit 0
