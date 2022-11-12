@@ -132,7 +132,7 @@ main() {
 	else
 		r_port=`docker inspect "$software_name" | jq ".[0].Args" | grep -A1 rpc-port | grep -oE '[0-9]+' | tail -1`
 	fi
-	if [ "$r_port" -eq "$p_port" ] || [ ! -n "$r_port" ]; then
+	if [ ! -n "$r_port" ] || [ "$r_port" -eq "$p_port" ]; then
 		r_port=9934
 	fi
 
